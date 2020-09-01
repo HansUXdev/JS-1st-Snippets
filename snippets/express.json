@@ -1,0 +1,235 @@
+{
+    "app": {
+        "prefix": "app",
+        "body": "const app = express();",
+        "description": "Initiazlizing app variable"
+    },
+    "app.use": {
+        "prefix": "app.use",
+        "body": "app.use('$1');",
+        "description": "Insert app.use"
+    },
+    "app.use.json": {
+        "prefix": "app.json",
+        "body": "app.use(express.json());",
+        "description": "Insert express.json to app (app.use)"
+    },
+    "app.get": {
+        "prefix": "app.get",
+        "body": [
+            "app.get('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP GET request."
+    },
+    "app.post": {
+        "prefix": "app.post",
+        "body": [
+            "app.post('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP POST request."
+    },
+    "app.put": {
+        "prefix": "app.put",
+        "body": [
+            "app.put('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP PUT request."
+    },
+    "app.delete": {
+        "prefix": "app.delete",
+        "body": [
+            "app.delete('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "To route to a specified path with a callback"
+    },
+    "app.patch": {
+        "prefix": "app.patch",
+        "body": [
+            "app.patch('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP PATCH request."
+    },
+    "app.route": {
+        "prefix": "app.route",
+        "body": [
+            "app.route('/${1:path}')",
+            ".all(function (req, res, next) {",
+            "  // runs for all HTTP verbs first",
+            "  // think of it as route specific middleware!",
+            "})",
+            ".get(function (req, res, next) {",
+            "  res.json({})",
+            "})",
+            ".post(function (req, res, next) {",
+            "  // maybe add a new event...",
+            "});"
+        ],
+        "description": "app.route"
+    },
+    "app.listen": {
+        "prefix": "listen",
+        "body": " app.listen(${1:port});",
+        "description": "Starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen()"
+    },
+    "app.listen template": {
+        "prefix": "app.listen",
+        "body": [
+            "app.listen(${1:port}, () => {",
+            "\tconsole.log(`Server started on ${2:port}`);",
+            "});"
+        ],
+        "description": "Starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen()"
+    },
+    "app template": {
+        "prefix": "app.template",
+        "body": [
+            "const express = require('express');",
+            "const app = express();",
+            "",
+            "app.get('${1:path}', (req, res) => {",
+            "return \t${2:body}",
+            "});",
+            "",
+            "app.listen(process.env.PORT || ${3:port}, () => {",
+            "\tconsole.log(`Server started on ${3:port}`);",
+            "});",
+            "",
+            "//npm start, open your browser and run localhost:${3:port}"
+        ],
+        "description": "Create a express app template"
+    },
+    "router": {
+        "prefix": "router",
+        "body": "const router = require('express').Router();",
+        "description": "Initiazlizing router variable"
+    },
+    "router.use": {
+        "prefix": "router.use",
+        "body": "router.use($1);",
+        "description": "Insert router.use()"
+    },
+    "router.use.path": {
+        "prefix": "router.use.path",
+        "body": "router.use('{1:path}', ${2:router});",
+        "description": "Insert router.use() with path"
+    },
+    "router.get": {
+        "prefix": "router.get",
+        "body": [
+            "router.get('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP GET request."
+    },
+    "router.post": {
+        "prefix": "router.post",
+        "body": [
+            "router.post('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP POST request."
+    },
+    "router.put": {
+        "prefix": "router.put",
+        "body": [
+            "router.put('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP PUT request."
+    },
+    "router.delete": {
+        "prefix": "router.delete",
+        "body": [
+            "router.delete('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "To route to a specified path with a callback"
+    },
+    "router.patch": {
+        "prefix": "router.patch",
+        "body": [
+            "router.patch('${1:path}', (req, res) => {",
+            "return \t$2",
+            "});"
+        ],
+        "description": "Routes HTTP PATCH request."
+    },
+    "require a module": {
+        "prefix": "require",
+        "body": "const $1 = require('$2');",
+        "description": "Require package from node_modules/ or project"
+    },
+    "require express module": {
+        "prefix": "express",
+        "body": "const express = require('express');",
+        "description": "Require Expess package from node_modules/"
+    },
+    "import express module": {
+        "prefix": "iexpress",
+        "body": "import express from 'express';",
+        "description": "Import Expess package from node_modules/"
+    },
+    "require Router() from express": {
+        "prefix": "router",
+        "body": "const router = require('express').Router();",
+        "description": "Require Router() from express package"
+    },
+    "require routes index": {
+        "prefix": "routes",
+        "body": "const routes = require('./routes');",
+        "description": "Require routes index from routes directory"
+    },
+    "require mongoose": {
+        "prefix": "mongoose",
+        "body": "const mongoose = require('mongoose');",
+        "description": "Require mongoose from node_modules/"
+    },
+    "require mongoose connection": {
+        "prefix": "mongoose.conn",
+        "body": [
+            "mongoose.connect(",
+            "'mongodb+srv://${1:username}:${2:password}@cluster0-erizp.mongodb.net/${3:database}?retryWrites=true&w=majority'",
+            ", {",
+            "  useNewUrlParser: true,",
+            "  useCreateIndex: true,",
+            "  useUnifiedTopology: true",
+            "});"
+        ],
+        "description": "Require mongoose from node_modules/"
+    },
+    "export controller": {
+        "prefix": "controller",
+        "body": [
+            "module.exports = {",
+            "  index (req, res) {",
+            "    ${1:body}",
+            "  }",
+            "}"
+        ],
+        "description": "Export Controller"
+    },
+    "export router": {
+        "prefix": "export.router",
+        "body": "module.exports = router",
+        "description": "Export Router"
+    },
+    "export model": {
+        "prefix": "export.model",
+        "body": "module.exports = model('${$1:model}', ${$2:model}",
+        "description": "Export Model"
+    }
+}

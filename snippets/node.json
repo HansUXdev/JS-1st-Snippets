@@ -1,0 +1,122 @@
+{
+    "Async/await": {
+        "prefix": "node-async-await",
+        "body": [
+            "async function getData() {",
+            "  return Promise.resolve('data');",
+            "}",
+            "",
+            "async function getMoreData(data) {",
+            "  return Promise.resolve(data + 'more data');",
+            "}",
+            "",
+            "function getAll() {",
+            "  const data = await getData();",
+            "  const moreData = await getMoreData(data);",
+            "  return `All the data: ${data}, ${moreData}`;",
+            "}",
+            "",
+            "getAll().then((all) => {",
+            "  console.log('all the data')",
+            "})"
+        ],
+        "description": "demonstrates async/await"
+    },
+    "Async IIFE": {
+        "prefix": "node-iife",
+        "body": "(async (${1:arguments}) => {\n\t${0}\n})(${2});",
+        "description": "immediately-invoked ASYNC function"
+    },
+    "file read async": {
+        "prefix": "node-file-read-async",
+        "body": [
+            "const fs = require('fs');",
+            "fs.readFile('${1:input.txt}', function (err, data) {",
+            "  if (err) return console.error(err);",
+            "  console.log(data.toString());",
+            "});"
+        ],
+        "description": "Reads a file asynchronously"
+    },
+    "Node.js style callback": {
+        "prefix": "cb",
+        "body": "(err, ${1:value}) => {${0}}",
+        "description": "Node.js style callback"
+    },
+    "require": {
+        "prefix": "re",
+        "body": "require('${1:module}');",
+        "description": "require"
+    },
+    "require local": {
+        "prefix": "rel",
+        "body": "require('./${1:module}');",
+        "description": "require local"
+    },
+    "require assignment": {
+        "prefix": "req",
+        "body": "const ${1:module} = require('${1:module}');",
+        "description": "require assignment"
+    },
+    "require assignment local": {
+        "prefix": "reql",
+        "body": "const ${1:module} = require('./${1:module}');",
+        "description": "require assignment local"
+    },
+    "destructuring require assignment": {
+        "prefix": "dreq",
+        "body": "const {${1:module}} = require('${1:module}');",
+        "description": "destructuring require assignment"
+    },
+    "destructuring require assignment local": {
+        "prefix": "dreql",
+        "body": "const {${1:module}} = require('./${1:module}');",
+        "description": "destructuring require assignment local"
+    },
+    "exports.member": {
+        "prefix": "em",
+        "body": "exports.${1:member} = ${2:value};",
+        "description": "exports.member"
+    },
+    "module.exports": {
+        "prefix": "me",
+        "body": "module.exports = ${1:name};",
+        "description": "module.exports"
+    },
+    "module exports object": {
+        "prefix": "meo",
+        "body": "module.exports = {\n\t${1:member}\n};",
+        "description": "module exports object"
+    },
+    "event handler": {
+        "prefix": "on",
+        "body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n});",
+        "description": "event handler"
+    },
+    "HTTP - https://nodejs.org/api/http.html": {
+        "prefix": "http",
+        "body": [
+            "let http = require('http')",
+            "const PORT = ${1};",
+            "",
+            "",
+            "http.createServer(",
+            "  (request,res)=>{",
+            "    if (request.url == ${2:'/'}) {",
+            "      res.writeHead(200, {",
+            "        'Content-Type': 'text/html',",
+            "        'Content-Length': ${3:index.html}.length,",
+            "        'Expires': new Date().toUTCString()",
+            "      })",
+            "      res.end(${3:index.html});",
+            "    }",
+            "    else {",
+            "      return response.end('Invalid request');",
+            "    }",
+            "  }",
+            ").listen(PORT);",
+            ""
+        ],
+        "description": "Create a basic HTTP server - https://nodejs.org/api/http.html"
+    }
+}

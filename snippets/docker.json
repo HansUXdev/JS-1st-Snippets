@@ -1,0 +1,14 @@
+{
+	"Node Dockerfile": {
+		"prefix": "js1-dockerfile",
+		"body": [
+		  "FROM node:${1|latest,12|}",
+		  "WORKDIR /usr/src/app",
+		  "RUN ${2|npm install, |}",
+		  "COPY package*.json ./ && . . ${3| ,&& |}",
+		  "EXPOSE ${4|3000, |}",
+		  "CMD [\"npm\", \"start\"]"
+		],
+		"description": "Creates a simple Dockerfile to wrap your node application in"
+	}
+}

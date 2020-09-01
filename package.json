@@ -1,19 +1,68 @@
 {
-    "name": "JS-1st",
-    "displayName": "",
-    "description": "JavaScript First is the best collection of snippets useful for working with JS--based servers, browsers, databases and more.",
+    "name": "javascript-first-snippets",
+    "displayName": "The best JavaScript snippets for React, Node, Docker, the latest ES6, and much more.",
+    "description": "JavaScript First is a collection of snippets useful for working with JS--based servers, browsers, databases and more.",
+    "icon": "logo.png",
     "version": "0.0.1",
+    "publisher": "HansUXdev",
     "engines": {
         "vscode": "^1.48.0"
     },
     "categories": [
         "Snippets"
     ],
+    "keywords": [
+        "snippet",
+        "javascript",
+        "nodejs",
+        "hooks",
+        "react",
+        "react hooks",
+        "react native",
+        "express",
+        "expressjs"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HansUXdev/JS-1st-Snippets"
+    },
+    "scripts":{
+      "package": "npx vsce package",
+      "test": "npx vsce package && code --install-extension javascript-first-snippets-0.0.1.vsix"
+    },
     "contributes": {
         "snippets": [
             {
                 "language": "javascript",
-                "path": "./snippets/snippets.json"
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/algorithms.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/browser.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/node.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/mongo.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/react.json"
+            },
+            {
+                "language": "dockerfile",
+                "path": "./snippets/docker.json"
             }
         ]
     }

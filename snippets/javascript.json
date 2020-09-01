@@ -1,0 +1,370 @@
+{
+    "Comment": {
+        "prefix": "cc",
+        "body": [
+            "/**",
+            "* ${0}",
+            "**/"
+        ],
+        "description": "console.log"
+    },
+    "console.log": {
+        "prefix": "log",
+        "body": "console.log(${0});",
+        "description": "console.log"
+    },
+    "console.error": {
+        "prefix": "error",
+        "body": "console.error(${0});",
+        "description": "console.error"
+    },
+    "console.warn": {
+        "prefix": "warn",
+        "body": "console.warn(${0});",
+        "description": "console.warn"
+    },
+    "console.log labeled": {
+        "prefix": "logLabel",
+        "body": "console.log('${0}', ${0});",
+        "description": "console.log labeled"
+    },
+    "console.error labeled": {
+        "prefix": "cel",
+        "body": "console.error('${0}', ${0});",
+        "description": "console.error labeled"
+    },
+    "console.warn labeled": {
+        "prefix": "cwl",
+        "body": "console.warn('${0}', ${0});",
+        "description": "console.warn labeled"
+    },
+    "setTimeout": {
+        "prefix": "st",
+        "body": "setTimeout(() => {\n\t${0}\n}, ${1:delay});",
+        "description": "setTimeout"
+    },
+    "setInterval": {
+        "prefix": "si",
+        "body": "setInterval(() => {\n\t${0}\n}, ${1:delay});",
+        "description": "setInterval"
+    },
+    "setImmediate": {
+        "prefix": "sim",
+        "body": "setImmediate(() => {\n\t${0}\n});",
+        "description": "setImmediate"
+    },
+    "process nextTick": {
+        "prefix": "nt",
+        "body": "process.nextTick(() => {\n\t${0}\n});",
+        "description": "process nextTick"
+    },
+
+    "Declarations a new variable": {
+        "prefix": "var",
+        "body": "${1|const,let,var|}  ${2:name} = ${3|'string value',1,[],{},true,false,null|};\n${0}",
+        "description": "1. Declare a new variable(const,let,var) \n 2. Assign it a value (datatypes:'string value',1,[],{},true,false,null). \n 3. VAR is HOISTED.\n 4. CONST cannot be REASSIGNED = new TYPE. \n 5.   CONST is Mutable if = [] or {}"
+    },
+    "let assignment": {
+        "prefix": "let",
+        "body": "let ${1:name} ${2|=true,=false,='string',=1,=[],={},=null, |};\n${0}",
+        "description": "let assignment"
+    },
+    "const assignment": {
+        "prefix": "con",
+        "body": "const ${1:name} ${2|=true,=false,='string',=1,=[],={},=null, |};\n${0}",
+        "description": "const assignment"
+    },
+    "destructuring assignment": {
+        "prefix": "dl=",
+        "body": "${1|const,let|} {${2:name}} = ${2:value};",
+        "description": "destructuring assignment with optional let"
+    },
+
+    "if statement": {
+        "prefix": "if",
+        "body": "if (${1:condition}) {\n\t${0}\n}",
+        "description": "if statement"
+    },
+    "if/else statement": {
+        "prefix": "ife",
+        "body": "if (${1:condition}) {\n\t${0}\n} else {\n\t\n}",
+        "description": "if/else statement"
+    },
+    "else if statement": {
+        "prefix": "ei",
+        "body": "else if (${1:condition}) {\n\t${0}\n}",
+        "description": "else if statement"
+    },
+    "ternary operator": {
+        "prefix": "ter",
+        "body": "${1:condition} ? ${2:expression} : ${3:expression};",
+        "description": "ternary operator"
+    },
+    "switch case": {
+        "prefix": "sw",
+        "body": "switch (${1:expr}) {\n\tcase ${2:value}:\n\t\treturn $0;\n\tdefault:\n\t\treturn;\n}",
+        "description": "switch case"
+    },
+    "try/catch": {
+        "prefix": "tc",
+        "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
+        "description": "try/catch"
+    },
+    "try/finally": {
+        "prefix": "tf",
+        "body": "try {\n\t${0}\n} finally {\n\t\n}",
+        "description": "try/finally"
+    },
+    "try/catch/finally": {
+        "prefix": "tcf",
+        "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}",
+        "description": "try/catch/finally"
+    },
+
+    "for loop": {
+        "prefix": "fl",
+        "body": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
+        "description": "for loop"
+    },
+    "reverse for loop": {
+        "prefix": "rfl",
+        "body": "for (let ${1:i} = ${2:iterable}.length - 1; ${1:i} >= 0; ${1:i}--) {\n\t${0}\n}",
+        "description": "reverse for loop"
+    },
+    "for in loop": {
+        "prefix": "fi",
+        "body": "for (let ${1:key} in ${2:array}) {\n\tif (${2:array}.hasOwnProperty(${1:key})) {\n\t\t${0}\n\t}\n}",
+        "description": "for in loop"
+    },
+    "for of loop ": {
+        "prefix": "fo",
+        "body": "for (let ${1:key} of ${2:array}) {\n\t${0}\n}",
+        "description": "for of loop "
+    },
+    "while loop": {
+        "prefix": "wl",
+        "body": "while (${1:condition}) {\n\t${0}\n}",
+        "description": "while loop"
+    },
+
+    "anonymous function": {
+        "prefix": "afun",
+        "body": "function (${1:arguments}) {\n\t${0}\n}",
+        "description": "anonymous function"
+    },
+    "Function Declaration ": {
+        "prefix": "fun",
+        "body": "function ${1:name}(${2:arguments}) {\n\t${0}\n}",
+        "description": "Declaration functions are HOISTED in browsers, but not in node."
+    },
+    "Function expression": {
+        "prefix": "fn",
+        "body": "const ${1:name} = function ${1:name}(${2:arguments}) {\n\t${0}\n}",
+        "description": "A function expression is not hoisted."
+    },
+    "Arrow expression ": {
+        "prefix": "nf",
+        "body": "const ${1:name} = (${2:arguments}) => {\n\t${0}\n}",
+        "description": "Named (arrow) function with body "
+    },
+    "immediately-invoked function expression (IIFE)": {
+        "prefix": "iife",
+        "body": "((${1:arguments}) => {\n\t${0}\n})(${2});",
+        "description": "immediately-invoked function expression (IIFE): self-executive code"
+    },
+    "anonymous arrow function ": {
+        "prefix": "af",
+        "body": "(${1:arguments}) => ${2:statement}",
+        "description": "anonymous arrow function: useful for callbacks"
+    },
+    "arrow function with body ": {
+        "prefix": "afb",
+        "body": "(${1:arguments}) => {\n\t${0}\n}",
+        "description": " arrow function with body "
+    },
+    "generator function ": {
+        "prefix": "gf",
+        "body": "function* (${1:arguments}) {\n\t${0}\n}",
+        "description": "generator function "
+    },
+    "named generator function ": {
+        "prefix": "gfn",
+        "body": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}",
+        "description": "named generator function "
+    },
+
+    "sequence of 0..n": {
+        "prefix": "seq",
+        "body": "[...Array(${1:length}).keys()]${0}",
+        "description": "sequence of 0..n"
+    },
+    "forEach loop": {
+        "prefix": "fe",
+        "body": "${1}.forEach((${2:item}) => {\n\t${0}\n});",
+        "description": "forEach loop"
+    },
+    "map": {
+        "prefix": "map",
+        "body": "${1}.map((${2:item}) => {\n\t${0}\n});",
+        "description": "map"
+    },
+    "reduce": {
+        "prefix": "reduce",
+        "body": "${1}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial});",
+        "description": "reduce"
+    },
+    "filter": {
+        "prefix": "filter",
+        "body": "${1}.filter(${2:item} => {\n\t${0}\n});",
+        "description": "filter"
+    },
+    "find": {
+        "prefix": "find",
+        "body": "${1}.find(${2:item} => {\n\t${0}\n});",
+        "description": "find"
+    },
+
+    "object literal": {
+        "prefix": "ol",
+        "body": "{\n\tkv${0}\n};",
+        "description": "object literal"
+    },
+    "same-line object literal": {
+        "prefix": "slol",
+        "body": "{ kv${0} };",
+        "description": "same-line object literal"
+    },
+    "key/value pair": {
+        "prefix": "kv",
+        "body": "${1:key}: ${2:value},",
+        "description": "key/value pair"
+    },
+    "class ": {
+        "prefix": "c",
+        "body": "class ${1:name} {\n\tconstructor(${2:arguments}) {\n\t\t${0}\n\t}\n}",
+        "description": "class "
+    },
+    "child class ": {
+        "prefix": "cex",
+        "body": "class ${1:name} extends ${2:base} {\n\tconstructor(${3:arguments}) {\n\t\tsuper(${3:arguments});\n\t\t${0}\n\t}\n}",
+        "description": "child class "
+    },
+    "class constructor ": {
+        "prefix": "ctor",
+        "body": "constructor(${1:arguments}) {\n\tsuper(${1:arguments});${0}\n}",
+        "description": "class constructor "
+    },
+    "method (ES6 syntax)": {
+        "prefix": "m",
+        "body": "${1:method}(${2:arguments}) {\n\t${0}\n}",
+        "description": "method (ES6 syntax)"
+    },
+    "getter (ES6 syntax)": {
+        "prefix": "get",
+        "body": "get ${1:property}() {\n\t${0}\n}",
+        "description": "getter (ES6 syntax)"
+    },
+    "setter (ES6 syntax)": {
+        "prefix": "set",
+        "body": "set ${1:property}(${2:value}) {\n\t${0}\n}",
+        "description": "setter (ES6 syntax)"
+    },
+    "getter and setter (ES6 syntax)": {
+        "prefix": "gs",
+        "body": "get ${1:property}() {\n\t${0}\n}\nset ${1:property}(${2:value}) {\n\t\n}",
+        "description": "getter and setter (ES6 syntax)"
+    },
+    "prototypal constructor": {
+        "prefix": "pctor",
+        "body": "var ${1:Class} = function(${2:arguments}) {\n\t${0}\n};",
+        "description": "prototypal constructor"
+    },
+    "prototype method": {
+        "prefix": "proto",
+        "body": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
+        "description": "prototype method"
+    },
+    "Object.assign": {
+        "prefix": "oa",
+        "body": "Object.assign(${1:dest}, ${2:source})",
+        "description": "Object.assign"
+    },
+    "Object.assign copy (shallow clone)": {
+        "prefix": "oc",
+        "body": "Object.assign({}, ${1:original}, ${2:source})",
+        "description": "Object.assign copy (shallow clone)"
+    },
+
+    "Optional chaining operator - https
+        "prefix": "oco",
+        "body": [
+        "const ${1:variable} = ${2:Parent}.${3:Child}?.${4:ChildPropery};",
+        "console.log(${1:variable});"
+        ],
+        "description": "Optional chaining operator - https
+    },
+
+    "return": {
+        "prefix": "r",
+        "body": "return ${0};",
+        "description": "return"
+    },
+    "return Promise ": {
+        "prefix": "rp",
+        "body": "return new Promise((resolve, reject) => {\n\t${0}\n});",
+        "description": "return Promise "
+    },
+    "return complex value (such as JSX components)": {
+        "prefix": "rc",
+        "body": "return (\n\t${0}\n);",
+        "description": "return complex value (such as JSX components)"
+    },
+
+    "typeof": {
+        "prefix": "tof",
+        "body": "typeof ${1:source} === '${2:undefined}'",
+        "description": "typeof"
+    },
+    "instanceof": {
+        "prefix": "iof",
+        "body": "${1:source} instanceof ${2:Object}",
+        "description": "instanceof"
+    },
+
+    "Promise ": {
+        "prefix": "pr",
+        "body": "new Promise((resolve, reject) => {\n\t${0}\n})",
+        "description": "Promise "
+    },
+    "Promise.then": {
+        "prefix": "then",
+        "body": "${1:promise}.then((${2:value}) => {\n\t${0}\n})",
+        "description": "Promise.then"
+    },
+    "Promise.catch": {
+        "prefix": "catch",
+        "body": "${1:promise}.catch((${2:err}) => {\n\t${0}\n})",
+        "description": "Promise.catch"
+    },
+
+    "export ": {
+        "prefix": "ex",
+        "body": "export ${1:member};",
+        "description": "export "
+    },
+    "export default ": {
+        "prefix": "exd",
+        "body": "export default ${1:member};",
+        "description": "export default "
+    },
+    "import module ": {
+        "prefix": "imp",
+        "body": "import ${1:*} from '${2:module}';",
+        "description": "import module "
+    },
+    "import module as ": {
+        "prefix": "ima",
+        "body": "import ${1:*} as ${2:name} from '${3:module}';",
+        "description": "import module as "
+    }
+}

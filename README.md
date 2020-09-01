@@ -1,14 +1,14 @@
 # JS-1st README
 
-This extension contains code snippets for JavaScript in the latest ES standards syntax for Vs Code and [vscodium](https://vscodium.com/), the open source alternitive  (supports both JavaScript and TypeScript).
+This extension aims to be the most **comprehensive code snippet extension for JavaScript**. It adds the latest ES standards syntax, promotes vanilia JS while providing 1st rate features to popular frameworks such as react, react-native, ect.
 
-Although this extension supports various frameworks, it aims to eventually replace some of them in favor of better vanillia code standards based on community feed back.
+It's published on both VS Code and [vscodium](https://vscodium.com/), the open source alternitive. 
 
-This extension will be primarily published and maintained on [open-vsx](https://open-vsx.org/) and all updates will be intentionally delayed on vs marketplace. 
+NOTES: 
+- Although this extension supports various frameworks, it aims to eventually replace some of them in favor of better code standards based on community feedback.
+- This extension will be primarily published and maintained on [open-vsx](https://open-vsx.org/) and all updates will be intentionally delayed on the vs-marketplace by 24 hours in order to promote the [open source marketplace](https://open-vsx.org/). 
 
 <!-- Eventually it may be removed from the microsoft's pseudo-open source marketplace so download it while you can. -->
-
-
 
 
 ## Features
@@ -17,133 +17,35 @@ Describe specific features of your extension including screenshots of your exten
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
+## Snippet Catagories
+This extension has several catagories and multiple snippet files. 
+As a result documentation will not be fully up to date.
 
-
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Snippets
 The following snippets falling to the following catagories:
 1. JavaScript Methods
+   1. Declarations
+   2. Control Flow
+   3. Functions
+   4. Loops
+   5. Iterables
+   6. Objects
+   7. Classes
 2. Node Methods
+   1. require
+   2. export
+   3. http
+   4. etc
 3. Test Driven Development
 4. Browser Methods
-5. Dockerfile
-6. React Methods
+5. React Methods
+6. Dockerfile
+7. Algorithms (because interviews about them are dumb)
 
-## JavaScript methods
-
-### Variable Declaration
 
 
 ## DOM
-
-
-### [ac] appendChild
-
-```javascript
-${1:document}.appendChild(${2:elem});
-```
-
-### [rc] removeChild
-
-```javascript
-${1:document}.removeChild(${2:elem});
-```
-
-### [cel] createElement
-
-```javascript
-${1:document}.createElement(${2:elem});
-```
-
-### [cdf] createDocumentFragment
-
-```javascript
-${1:document}.createDocumentFragment();
-```
-
-### [ca] classList.add
-
-```javascript
-${1:document}.classList.add('${2:class}');
-```
-
-### [ct] classList.toggle
-
-```javascript
-${1:document}.classList.toggle('${2:class}');
-```
-
-### [cr] classList.remove
-
-```javascript
-${1:document}.classList.remove('${2:class}');
-```
-
-### [gi] getElementById
-
-```javascript
-${1:document}.getElementById('${2:id}');
-```
-
-### [gc] getElementsByClassName
-
-```javascript
-${1:document}.getElementsByClassName('${2:class}');
-```
-
-### [gt] getElementsByTagName
-
-```javascript
-${1:document}.getElementsByTagName('${2:tag}');
-```
-
-### [ga] getAttribute
-
-```javascript
-${1:document}.getAttribute('${2:attr}');
-```
-
-### [sa] setAttribute
-
-```javascript
-${1:document}.setAttribute('${2:attr}', ${3:value});
-```
-
-### [ra] removeAttribute
-
-```javascript
-${1:document}.removeAttribute('${2:attr}');
-```
-
-### [ih] innerHTML
-
-```javascript
-${1:document}.innerHTML = '${2:elem}';
-```
-
-### [tc] textContent
-
-```javascript
-${1:document}.textContent = '${2:content}';
-```
-
-### [qs] querySelector
-
-```javascript
-${1:document}.querySelector('${2:selector}');
-```
-
-### [qsa] querySelectorAll
-
-```javascript
-${1:document}.querySelectorAll('${2:selector}');
-```
+Snippets for basic DOM manipulation.
 
 
 ## Known Issues

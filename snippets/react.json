@@ -1,0 +1,221 @@
+{
+    "import React": {
+        "prefix": "imr",
+        "body": [
+            "import React from 'react'",
+            ""
+        ]
+    },
+    "import ReactDOM": {
+        "prefix": "imrd",
+        "body": [
+            "import ReactDOM from 'react-dom'",
+            ""
+        ]
+    },
+    "import React, { Component }": {
+        "prefix": "imrc",
+        "body": [
+            "import React, { Component } from 'react'",
+            ""
+        ]
+    },
+    "import React, {useState}": {
+        "prefix": "imrs",
+        "body": [
+            "import React, { useState } from 'react'",
+            ""
+        ]
+    },
+    "import React, {useState, useEffect}": {
+        "prefix": "imrse",
+        "body": [
+            "import React, { useState, useEffect } from 'react'",
+            ""
+        ]
+    },
+    // Hook Utilities
+    "import all react hooks": {
+        "prefix": "irh",
+        "body": [
+            "import React, { useState, useContext, useEffect, useCallback, useMemo } from 'react';"
+        ]
+    },
+    "import react hook": {
+        "prefix": "irh",
+        "body": [
+            "import React, ${|useState, useContext, useEffect, useCallback, useMemo|} from 'react';"
+        ]
+    },
+    "useState": {
+        "prefix": "ush",
+        "body": [
+            "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0"
+        ],
+        "description": "React useState() hook"
+    },
+    "useEffect": {
+        "prefix": "ueh",
+        "body": [
+            "useEffect(() => {",
+            "\t$1",
+            "\n\treturn cleanUp = () => {",
+            "\t\t$2",
+            "\t}",
+            "}, [${3}]);$0"
+        ],
+        "description": "React useEffect() hook"
+    },
+    "useContext": {
+        "prefix": "uch",
+        "body": [
+            "const $1 = useContext($2);$0"
+        ],
+        "description": "React useContext() hook"
+    },
+    "useCallback": {
+        "prefix": "ucbh",
+        "body": [
+            "const ${1:memoizedCallback} = useCallback(",
+            "\t() => {",
+            "\t\t${2:doSomething}(${3:a}, ${4:b})",
+            "\t},",
+            "\t[${5:a}, ${6:b}],",
+            ");$0"
+        ],
+        "description": "React useCallback() hook"
+    },
+    "useMemo": {
+        "prefix": "umh",
+        "body": [
+            "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}]);$0"
+        ],
+        "description": "React useMemo() hook"
+    },
+    // Create Components
+    "reactFunctionalComponent": {
+        "prefix": "rfc",
+        "body": [
+            "import React from 'react'",
+            "",
+            "export default function ${1:${COMPONENT_NAME}}() {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t)",
+            "}",
+            ""
+        ],
+        "description": "Creates a React Functional Component with ES7 module system"
+    },
+    "reactFunctionalComponentWithPropTypes": {
+        "prefix": "rfcp",
+        "body": [
+            "import React from 'react'",
+            "import PropTypes from 'prop-types'",
+            "",
+            "function ${1:${COMPONENT_NAME}}(props) {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t)",
+            "}",
+            "",
+            "${1:${COMPONENT_NAME}}.propTypes = {",
+            "",
+            "}",
+            "",
+            "export default ${1:${COMPONENT_NAME}}",
+            "",
+            ""
+        ],
+        "description": "Creates a React Functional Component with ES7 module system with PropTypes"
+    },
+    "reactNativeFunctionalExportComponent": {
+        "prefix": "rnfe",
+        "body": [
+            "import React from 'react'",
+            "import { View, Text } from 'react-native'",
+            "",
+            "const ${1:${COMPONENT_NAME}} = () => {",
+            "\treturn (",
+            "\t\t<View>",
+            "\t\t\t<Text>$0</Text>",
+            "\t\t</View>",
+            "\t)",
+            "}",
+            "",
+            "export default ${1:${COMPONENT_NAME}}",
+            ""
+        ],
+        "description": "Creates a React Native Functional Component"
+    },
+    //  Use State Component
+    "React useState Component (functional)": {
+        "prefix": "rusc",
+        "body": [
+            "import React, { useState } from 'react';\n",
+            "export default function ${1:COMPONENT_NAME}() {",
+            "\tconst [${2}, set${2}] = useState(${3| ,'string value',1,[],{},true,false,null|});\n",
+            "\treturn (",
+            "\t\t<>",
+            "\t\t\t$0",
+            "\t\t</>",
+            "\t)",
+            "}",
+            ""
+        ],
+        "description": "Creates a React Functional Component with useState and fragments"
+    },
+    "React useState Functional Component With PropTypes": {
+        "prefix": "ruscp",
+        "body": [
+            "import React, { useState } from 'react';",
+            "const [${2}, set${2/(.*)/${2:/capitalize}/}] = useState();",
+            "import PropTypes from 'prop-types'",
+            "",
+            "function ${1:${COMPONENT_NAME}}(props) {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t)",
+            "}",
+            "",
+            "${1:${COMPONENT_NAME}}.propTypes = {",
+            "",
+            "}",
+            "",
+            "export default ${1:${COMPONENT_NAME}}",
+            "",
+            ""
+        ],
+        "description": "Creates a useState Component with PropTypes"
+    },
+    //  Memo
+    "reactFunctionMemoComponentWithPropTypes": {
+        "prefix": "rmcp",
+        "body": [
+            "import React, { memo } from 'react'",
+            "import PropTypes from 'prop-types'",
+            "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}]);",
+            "const ${7:${COMPONENT_NAME}} = memo(function ${8:${COMPONENT_NAME}}(props) {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t)",
+            "})",
+            "",
+            "${7:${COMPONENT_NAME}}.propTypes = {",
+            "",
+            "}",
+            "",
+            "export default ${7:${COMPONENT_NAME}}",
+            ""
+        ],
+        "description": "Creates a React Memo Function Component with PropTypes and use memo"
+    }
+}
