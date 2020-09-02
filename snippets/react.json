@@ -200,8 +200,8 @@
         "body": [
             "import React, { memo } from 'react'",
             "import PropTypes from 'prop-types'",
-            "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}]);",
             "const ${7:${COMPONENT_NAME}} = memo(function ${8:${COMPONENT_NAME}}(props) {",
+            "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}]);",
             "\treturn (",
             "\t\t<div>",
             "\t\t\t$0",

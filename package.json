@@ -12,15 +12,14 @@
         "Snippets"
     ],
     "keywords": [
-        "snippet",
         "javascript",
+        "snippet",
         "nodejs",
+        "express",
         "hooks",
         "react",
         "react hooks",
-        "react native",
-        "express",
-        "expressjs"
+        "react native"
     ],
     "repository": {
         "type": "git",
@@ -28,7 +27,8 @@
     },
     "scripts":{
       "package": "npx vsce package",
-      "test": "npx vsce package && code --install-extension javascript-first-snippets-0.0.1.vsix"
+      "test": "npx vsce package && code --install-extension javascript-first-snippets-0.0.1.vsix",
+      "publish": ""
     },
     "contributes": {
         "snippets": [
