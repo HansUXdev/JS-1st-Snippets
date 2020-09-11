@@ -2,8 +2,7 @@
     "import React": {
         "prefix": "imr",
         "body": [
-            "import React from 'react'",
-            ""
+            "import React from 'react'"
         ]
     },
     "import ReactDOM": {
@@ -34,7 +33,6 @@
             ""
         ]
     },
-    // Hook Utilities
     "import all react hooks": {
         "prefix": "irh",
         "body": [
@@ -92,7 +90,6 @@
         ],
         "description": "React useMemo() hook"
     },
-    // Create Components
     "reactFunctionalComponent": {
         "prefix": "rfc",
         "body": [
@@ -152,7 +149,6 @@
         ],
         "description": "Creates a React Native Functional Component"
     },
-    //  Use State Component
     "React useState Component (functional)": {
         "prefix": "rusc",
         "body": [
@@ -194,7 +190,6 @@
         ],
         "description": "Creates a useState Component with PropTypes"
     },
-    //  Memo
     "reactFunctionMemoComponentWithPropTypes": {
         "prefix": "rmcp",
         "body": [

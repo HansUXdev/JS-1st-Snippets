@@ -1,8 +1,16 @@
 # JS-1st README
 
-This extension aims to be the most **comprehensive code snippet extension for JavaScript**. It adds the latest ES standards syntax, promotes vanilia JS while providing 1st rate features to popular frameworks such as react, react-native, ect.
+This extension aims to be the most **comprehensive code snippet extension for JavaScript**. This extension isn’t meant to just replace the most popular JavaScript Snippets you already use, but go beyond them (eventually). Here are few goals I have for creating this new extension:
 
-It's published on both VS Code and [vscodium](https://vscodium.com/), the open source alternitive. 
+1. Go beyond code completion and gently correct bad habit like using var.
+
+2. Educate users about what they are typing with detailed descriptions.
+
+2. Provide links to documentation, articles and videos to help explain thing better
+
+3. Provide more snippets for common tasks in an effort to replace a few frameworks/libraries, example creating react components with hook 😉.
+
+
 
 NOTES: 
 - Although this extension supports various frameworks, it aims to eventually replace some of them in favor of better code standards based on community feedback.
@@ -10,12 +18,6 @@ NOTES:
 
 <!-- Eventually it may be removed from the microsoft's pseudo-open source marketplace so download it while you can. -->
 
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-\!\[feature X\]\(images/feature-x.png\)
 
 
 ## Snippet Catagories
@@ -40,22 +42,39 @@ The following snippets falling to the following catagories:
 4. Browser Methods
 5. React Methods
 6. Dockerfile
-7. Algorithms (because interviews about them are dumb)
+7. Algorithms (because memorizing them interviews is dumb)
+(currently just bubble sort, descriptions, tutorials, etc will be added soon).
 
 ## Documentation
- However, if you currently use the top ranked javascript snippets and react snippets, you should be able to uninstall them and use this extension as a full replacement.
+This extension is currently not documented as well as I would like. That will change by version 1.
+
+If you currently using the top ranked javascript snippets and react snippets, you should be able to uninstall them and use this extension as a full replacement. You can also read more about this on a [medium article](https://medium.com/@HansOnConsult/best-visual-studio-code-extensions-in-2020-3b1292937d4) I wrote a while ago and just updated.
+
+Here are a few gifs in the meantime...
+
+## Gently Correct bad code habits and explain why (ex: stop using var )
+![stop using var](./variables.gif)
+
+## Basic Algorithms, one tab away...
+![Algorithms](./Algorithms.gif)
+
+## React Hooks and Component snippets
+![React Hooks](./hookComponents.gif)
 
 
 ## Release Notes
 
-### 0.5.0
-Will have all the core JavaScript snippets documented for node and browser related methods.
+### 0.0.5
+Better documentation (gifs and readme) and a few smart features.
 
 ### 1.0.0
 I apologize for the lack of documentation. This extension is **currently in alpha**. My plan is finish the documentation by Version 1.
 
 
 ## Roadmap
+
+### 0.5.5
+Less snippets, more powerful features, better documentation.
 
 ### 1.5.0
 
