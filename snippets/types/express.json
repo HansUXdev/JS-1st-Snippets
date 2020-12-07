@@ -193,24 +193,6 @@
         "body": "const routes = require('./routes');",
         "description": "Require routes index from routes directory"
     },
-    "require mongoose": {
-        "prefix": "mongoose",
-        "body": "const mongoose = require('mongoose');",
-        "description": "Require mongoose from node_modules/"
-    },
-    "require mongoose connection": {
-        "prefix": "mongoose.conn",
-        "body": [
-            "mongoose.connect(",
-            "'mongodb+srv://${1:username}:${2:password}@cluster0-erizp.mongodb.net/${3:database}?retryWrites=true&w=majority'",
-            ", {",
-            "  useNewUrlParser: true,",
-            "  useCreateIndex: true,",
-            "  useUnifiedTopology: true",
-            "});"
-        ],
-        "description": "Require mongoose from node_modules/"
-    },
     "export controller": {
         "prefix": "controller",
         "body": [

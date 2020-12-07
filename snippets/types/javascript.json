@@ -58,7 +58,6 @@
         "body": "process.nextTick(() => {\n\t${0}\n});",
         "description": "process nextTick"
     },
-
     "Declarations a new variable": {
         "prefix": "var",
         "body": "${1|const,let,var|}  ${2:name} = ${3|'string value',1,[],{},true,false,null|};\n${0}",
@@ -294,16 +293,14 @@
         "body": "Object.assign({}, ${1:original}, ${2:source})",
         "description": "Object.assign copy (shallow clone)"
     },
-
-    "Optional chaining operator - https
+    "Optional chaining operator - https":{
         "prefix": "oco",
         "body": [
-        "const ${1:variable} = ${2:Parent}.${3:Child}?.${4:ChildPropery};",
-        "console.log(${1:variable});"
+            "const ${1:variable} = ${2:Parent}.${3:Child}?.${4:ChildPropery};",
+            "console.log(${1:variable});"
         ],
-        "description": "Optional chaining operator - https
+        "description": "Optional chaining operator - https"
     },
-
     "return": {
         "prefix": "r",
         "body": "return ${0};",
@@ -319,7 +316,6 @@
         "body": "return (\n\t${0}\n);",
         "description": "return complex value (such as JSX components)"
     },
-
     "typeof": {
         "prefix": "tof",
         "body": "typeof ${1:source} === '${2:undefined}'",
@@ -330,7 +326,6 @@
         "body": "${1:source} instanceof ${2:Object}",
         "description": "instanceof"
     },
-
     "Promise ": {
         "prefix": "pr",
         "body": "new Promise((resolve, reject) => {\n\t${0}\n})",
@@ -346,7 +341,6 @@
         "body": "${1:promise}.catch((${2:err}) => {\n\t${0}\n})",
         "description": "Promise.catch"
     },
-
     "export ": {
         "prefix": "ex",
         "body": "export ${1:member};",

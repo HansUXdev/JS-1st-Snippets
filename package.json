@@ -30,7 +30,7 @@
         "json-concat": "^0.0.1"
     },
     "scripts": {
-        "concat": "node_modules\\.bin\\json-concat snippets/types/ snippets/snippets.json",
+        "concat": "node_modules\\.bin\\json-concat snippets/types/* snippets/snippets.json",
         "package": "npx vsce package",
         "snip": "code --install-extension javascript-first-snippets-0.0.5.vsix",
         "test": "npx vsce package && npm run snip",
@@ -40,11 +40,11 @@
     "contributes": {
         "snippets": [
             {
-                "language": "javascriptreact",
+                "language": "javascript",
                 "path": "./snippets/snippets.json"
             },
             {
-                "language": "javascript",
+                "language": "javascriptreact",
                 "path": "./snippets/snippets.json"
             },
             {
