@@ -3,7 +3,7 @@
     "displayName": " JavaScript First - The best JS snippets and much more.",
     "description": "JavaScript First is a collection of snippets useful for working with JS--based servers, browsers, databases and more.",
     "icon": "logo.png",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "HansUXdev",
     "engines": {
         "vscode": "^1.48.0"
